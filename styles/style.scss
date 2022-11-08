@@ -1,0 +1,31 @@
+button {
+  padding: 10px 80px;
+  font-size: 12px;
+  border-radius: 3px;
+  background-color: navy;
+  color: azure;
+  align-items: center;
+}
+
+.student-list-container {
+  height: 100%;
+  width: 15%;
+  position: fixed;
+  background-color: navy;
+  color: azure;
+  padding: 15px;
+}
+.dooms-day-container {
+  background-color: #efefef;
+  color: navy;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 20px;
+
+  & .your-lucky-day h3 {
+    color: midnightblue;
+    font-size: 50px;
+    font-family: "Lucida Sans", sans-serif;
+  }
+}
