@@ -1,3 +1,14 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Lucida Sans", sans-serif;
+}
+.content-container {
+  background-color: #efefef;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 15% 85%;
+}
 button {
   padding: 10px 80px;
   font-size: 12px;
@@ -9,19 +20,19 @@ button {
 
 .student-list-container {
   height: 100%;
-  width: 15%;
-  position: fixed;
-  background-color: navy;
+  // width: 15%;
+  // position: fixed;
+  background-color: rgb(12, 12, 62);
   color: azure;
-  padding: 15px;
+  text-align: center;
 }
 .dooms-day-container {
-  background-color: #efefef;
   color: navy;
   display: flex;
   justify-content: center;
   flex-direction: row;
-  margin: 20px;
+
+  height: 100 vh;
 
   & .your-lucky-day h3 {
     color: midnightblue;
