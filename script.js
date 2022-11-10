@@ -15,46 +15,67 @@
 //   return userData;
 // })();
 
-const listOfStudents = document.getElementsByClassName("list-of-students");
-const listOfStudentsDiv = listOfStudents.item(0);
+function updateCount(e, amt) {
+  // How to grab the weight per student
+  console.dir(e.target);
+  // Convert that text to a number, add 1, then set the innertext to the new number
+  // weight text.innerText = Number(weight text.innerText) + amt
+}
+
+const sideBarList = document.querySelector(".student-list");
 
 const studentInfo = {
   message: "Logged In",
-  user: { _id: 1, first_name: "Aiden", last_name: "Thomas", cohort: 3 },
+  user: { _id: 10, first_name: "Lisa", last_name: "Jenkins", cohort: 3 },
   users: [
-    { _id: 1, first_name: "lisa" },
-    { _id: 2, first_name: "royeal", last_name: "dee" },
+    { _id: 1, first_name: "Aiden", last_name: "Thomas" },
+    { _id: 2, first_name: "Amanda", last_name: "Leech" },
+    { _id: 3, first_name: "Brett", last_name: "Wheeler" },
+    { _id: 4, first_name: "Courtney", last_name: "Robertson" },
+    { _id: 5, first_name: "Crystal", last_name: "Sorensen" },
+    { _id: 6, first_name: "Enoka", last_name: "Silipa" },
+    { _id: 7, first_name: "Jackson", last_name: "Danise" },
+    { _id: 8, first_name: "Karely", last_name: "Ramirez" },
+    { _id: 9, first_name: "Kassidy", last_name: "Price" },
+    { _id: 10, first_name: "Lisa", last_name: "Jenkins" },
+    { _id: 11, first_name: "Lizzy", last_name: "Johnson" },
+    { _id: 12, first_name: "Madelyn", last_name: "Huntley" },
+    { _id: 13, first_name: "Matt", last_name: "Caldwell" },
+    { _id: 14, first_name: "Michael", last_name: "Alder" },
+    { _id: 15, first_name: "Olivia", last_name: "Marolf" },
+    { _id: 16, first_name: "Royeal", last_name: "Dee" },
+    { _id: 17, first_name: "Tallon", last_name: "Wanless" },
   ],
 };
 
-console.log(studentInfo);
-console.log(studentInfo.users);
-console.log(Object.keys(studentInfo));
 function handleStudentsList() {
-  let names = Object.keys(studentInfo.users[1]);
-  console.log(names);
-  for (student of studentInfo) {
-    console.log(student.first_name);
+  for (student of studentInfo.users) {
+    const firstName = student.first_name;
     const containerDiv = document.createElement("div");
-    const studentName = createTextNode(student);
+    const studentName = document.createTextNode(firstName);
 
-    const redAddBtn = createElement("button");
+    const redAddBtn = document.createElement("button");
     redAddBtn.classList.add("red-add-btn");
     redAddBtn.innerText = "+";
-    redAddBtn.onclick = addToCount();
+    // redAddBtn.onclick = addToCount();
 
     const greenNegBtn = document.createElement("button");
     greenNegBtn.classList.add("green-neg-btn");
     greenNegBtn.innerText = "-";
-    greenNegBtn.onclick = addToCount();
+    // greenNegBtn.onclick = minusfrom;
 
     containerDiv.appendChild(studentName);
     containerDiv.appendChild(redAddBtn);
     containerDiv.appendChild(greenNegBtn);
 
-    listOfStudents.appendChild(containerDiv);
-    console.log(containerDiv);
+    sideBarList.appendChild(containerDiv);
   }
 }
 
 handleStudentsList();
+
+// const get computerChoice = () => {
+//   const randomNumber = (Math.floor(Math.random() * 17))
+//
+//   }
+// }

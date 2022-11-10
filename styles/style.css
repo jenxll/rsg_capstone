@@ -8,7 +8,7 @@ body {
   background-color: #efefef;
   height: 100vh;
   display: grid;
-  grid-template-columns: 15% 85%;
+  grid-template-columns: 20% 80%;
 }
 
 button {
@@ -25,6 +25,18 @@ button {
   background-color: rgb(12, 12, 62);
   color: azure;
   text-align: center;
+  overflow: scroll;
+}
+.student-list-container .student-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.student-list-container .student-list button {
+  padding: 3px 3px;
+  background-color: #4fc69e;
+  color: azure;
 }
 
 .dooms-day-container {
@@ -33,6 +45,7 @@ button {
   justify-content: center;
   flex-direction: row;
   height: 100 vh;
+  text-align: center;
 }
 .dooms-day-container .your-lucky-day h3 {
   color: midnightblue;
