@@ -74,8 +74,6 @@ function handleStudentsList() {
 
 handleStudentsList();
 
-// const get computerChoice = () => {
-//   const randomNumber = (Math.floor(Math.random() * 17))
-//
-//   }
-// }
+whoIsItGonna.addEventListener("click", (e) => {
+  const randomNumber = Math.floor(Math.random(users) * 17);
+});

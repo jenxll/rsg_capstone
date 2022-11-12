@@ -34,8 +34,9 @@ button {
     color: white;
   }
   .student-list button {
+    display: flex;
+    justify-content: center;
     padding: 3px 3px;
-
     background-color: #4fc69e;
     color: azure;
   }
